@@ -28,7 +28,7 @@ To install journeyMosaic, follow these steps:
 3. Use Docker Compose to build and run the containers:
 
     ```bash
-    docker-compose up --build -d
+    docker-compose -f docker-compose.yml up --build -d
     ```
 
     This command will start all the services defined in your `docker-compose.yml` file in detached mode.
