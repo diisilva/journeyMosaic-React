@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  client:
+    build: ./client
+    ports:
+      - "3000:3000"
+    depends_on:
+      - server
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+    environment:
+      - REACT_APP_API_URL=http://server:4000
+  server:
+    build: ./server
+    ports:
+      - "4000:4000"
+    environment:
+      - DB_HOST=ec2-52-67-251-110.sa-east-1.compute.amazonaws.com
+      - DB_PORT=5430
+      - DB_NAME=journey_mosaic_db
+      - DB_USER=admin
+      - DB_PASSWORD=mos@ic_admin
