@@ -40,12 +40,24 @@ Once the application is running, you can access the journeyMosaic software in yo
 * **Frontend:** Open your browser and go to `http://localhost:3000` to access the frontend interface.
 * **Backend API:** The API server can be accessed via `http://localhost:4000`. The API endpoints include `/register` for user registration and `/login` for user authentication.
 
+
+## Commit and push to journeyMosaic
+
+To contribute to journeyMosaic, follow these steps:
+
+1. execute `git pull origin main`
+2.  `git status`
+3. `git add *`
+4. `git status`
+5. `git commit -am 'name commit'`
+6. `git push origin <your branch>`
+
 ## Contributing to journeyMosaic
 
 To contribute to journeyMosaic, follow these steps:
 
 1. Fork this repository.
-2. Create a branch: `git checkout -b <branch_name>`.
+2. : `git checkout -b <branch_name>`.
 3. Make your changes and commit them: `git commit -m '<commit_message>'`
 4. Push to the original branch: `git push origin <project_name>/<location>`
 5. Create the pull request.
