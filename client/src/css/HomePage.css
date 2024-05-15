@@ -1,0 +1,267 @@
+.homepage {
+    background-color: transparent;
+    /* Ou remova esta linha */
+    position: relative;
+    min-height: 100vh;
+    color: #FFFFFF;
+    /* Para garantir que o texto fique legível no fundo escuro */
+}
+
+
+.subtract {
+    position: absolute;
+    width: 1537px;
+    height: 1114px;
+    left: -68px;
+    top: -1px;
+    background-size: cover;
+    z-index: 1;
+}
+
+.rectangle-44 {
+    position: absolute;
+    width: 1440px;
+    height: 1424px;
+    left: 0px;
+    top: 1022px;
+    background: #233861;
+    z-index: 1;
+}
+
+.rectangle-39 {
+    position: absolute;
+    width: 720px;
+    height: 512px;
+    left: 0px;
+    top: 0px;
+    background: #233861;
+    z-index: 1;
+}
+
+.journey-logo {
+    position: absolute;
+    width: 324px;
+    height: 324px;
+    left: 77px;
+    top: 51px;
+    background-size: cover;
+    z-index: 2;
+}
+
+.rectangle-40 {
+    position: absolute;
+    width: 514px;
+    height: 512px;
+    left: 0px;
+    top: 512px;
+    background: #233861;
+    z-index: 1;
+}
+
+.rectangle-43 {
+    position: absolute;
+    width: 300px;
+    height: 60px;
+    left: 594px;
+    top: 738px;
+    background: #1C1945;
+    border-radius: 20px;
+    z-index: 3;
+}
+
+.clique-aqui {
+    position: absolute;
+    width: 150px;
+    height: 32px;
+    left: 661px;
+    top: 751px;
+    font-family: 'JejuMyeongjo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 32px;
+    color: #FFFFFF;
+    z-index: 4;
+    cursor: pointer;
+}
+
+.subtract-1 {
+    position: absolute;
+    width: 231px;
+    height: 512px;
+    left: 489px;
+    top: 512px;
+    background: #233861;
+    z-index: 2;
+}
+
+.ellipse-2 {
+    position: absolute;
+    width: 393px;
+    height: 512px;
+    left: 514px;
+    top: 0px;
+    background-size: cover;
+    z-index: 3;
+    /* Coloca na frente de outros elementos */
+}
+
+.ellipse-3 {
+    position: absolute;
+    width: 421.01px;
+    height: 510.68px;
+    left: 940.85px;
+    top: 1020.65px;
+    background-size: cover;
+    transform: rotate(179.34deg);
+    z-index: 3;
+    /* Coloca na frente de outros elementos */
+}
+
+.journey-title {
+    position: absolute;
+    width: 397px;
+    height: 131px;
+    left: 589px;
+    top: 125px;
+    font-family: 'JejuMyeongjo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 48px;
+    color: #FFFFFF;
+    z-index: 5;
+    /* Coloca na frente das elipses */
+}
+
+.rectangle-4 {
+    position: absolute;
+    width: 300px;
+    height: 60px;
+    left: 595px;
+    top: 375px;
+    background: #1C1945;
+    border-radius: 20px;
+    z-index: 4;
+    /* Coloca acima da ellipse-2 */
+}
+
+.comece-agora {
+    position: absolute;
+    width: 224px;
+    height: 32px;
+    left: 633px;
+    top: 389px;
+    font-family: 'JejuMyeongjo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 32px;
+    color: #FFFFFF;
+    z-index: 5;
+    /* Coloca na frente das elipses */
+    cursor: pointer;
+}
+
+.rectangle-42 {
+    position: absolute;
+    width: 1156px;
+    height: 355px;
+    left: 149px;
+    top: 1177px;
+    background: #7389B6;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.rectangle-45 {
+    position: absolute;
+    width: 535px;
+    height: 355px;
+    left: 770px;
+    top: 1670px;
+    background: #7389B6;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.description {
+    position: absolute;
+    width: 480px;
+    height: 304px;
+    left: 804px;
+    top: 1697px;
+    font-family: 'JejuMyeongjo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    color: #000000;
+    z-index: 2;
+}
+
+.main-image {
+    position: absolute;
+    width: 583px;
+    height: 412px;
+    left: 78px;
+    top: 1670px;
+    background-size: cover;
+    z-index: 2;
+}
+
+.slogan {
+    position: absolute;
+    width: 838px;
+    height: 336px;
+    left: 351px;
+    top: 1243px;
+    font-family: 'JejuMyeongjo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    color: #FFFFFF;
+    z-index: 2;
+}
+
+.login-link {
+    position: absolute;
+    width: 316px;
+    height: 40px;
+    left: 595px;
+    top: 698px;
+    font-family: 'JejuMyeongjo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 32px;
+    color: #FFFFFF;
+    z-index: 2;
+}
+
+.remove-bg {
+    position: absolute;
+    width: 413px;
+    height: 400px;
+    left: 66px;
+    top: 499px;
+    background-size: cover;
+    z-index: 2;
+}
+
+.next-trip {
+    position: absolute;
+    width: 228px;
+    height: 167px;
+    left: 147px;
+    top: 642.95px;
+    font-family: 'Just Me Again Down Here';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 60px;
+    color: #000000;
+    transform: rotate(-8.82deg);
+    z-index: 2;
+}
