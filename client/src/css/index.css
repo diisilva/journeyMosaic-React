@@ -57,3 +57,12 @@ html {
     z-index: 3;
     margin-top: 10px;
 }
+
+.homepage {
+    background-color: #233861;
+    /* Esta linha pode ser removida se você preferir o fundo definido no body */
+    position: relative;
+    min-height: 100vh;
+    color: #FFFFFF;
+    /* Para garantir que o texto fique legível no fundo escuro */
+}
