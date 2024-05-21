@@ -7,8 +7,10 @@ function HospedagemForm() {
     const [formData, setFormData] = useState({
         nome: '', //nome
         endereco: '', // endereco
-        checkin: '', //checkin
-        checkout: '', //checkout
+        datacheckin: '', //checkin
+        datacheckout: '', //checkout
+        horacheckin: '', //checkin
+        horacheckout: '', //checkout
         valor: '' //valor
     });
 
@@ -20,7 +22,7 @@ function HospedagemForm() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (!formData.nome || !formData.endereco || !formData.checkin || !formData.checkout || !formData.valor) {
+        if (!formData.nome || !formData.endereco || !formData.datacheckin || !formData.datacheckout || !formData.horacheckin || !formData.horacheckout || !formData.valor) {
             alert("Por favor, preencha todos os campos.");
             return;
         }
@@ -34,9 +36,12 @@ function HospedagemForm() {
             },
             body: JSON.stringify({
                 nome: formData.nome,
-                endereco_rg: formData.endereco,
-                checkin: formData.checkin,
-                senha: formData.checkout
+                endereco: formData.endereco,
+                datacheckin: formData.datacheckin,
+                datacheckout: formData.datacheckout,
+                horacheckin: formData.horacheckin,
+                horacheckout: formData.horacheckout,
+                valor: formData.valor
             })
         })
             .then(response => {
@@ -51,8 +56,10 @@ function HospedagemForm() {
                 setFormData({
                     nome: '',
                     endereco: '',
-                    checkin: '',
-                    checkout: '',
+                    datacheckin: '',
+                    datacheckout: '',
+                    horacheckin: '',
+                    horacheckout: '',
                     valor: ''
                 });
             })
@@ -64,14 +71,18 @@ function HospedagemForm() {
 
     return (
         <div className="login-container">
+            {/*
             <img src={logo} alt="Journey Mosaic" className="logo" />
             <h2 className="text-center">Hospedagem</h2>
+            */}
             <form onSubmit={handleSubmit} className="form-group">
                 <input type="text" className="form-control" placeholder="Nome" name="nome" value={formData.nome} onChange={handleChange} required />
                 <input type="text" className="form-control" placeholder="Endereço" name="endereco" value={formData.endereco} onChange={handleChange} required />
-                <input type="checkin" className="form-control" placeholder="Check-in 00/00/0000 00:00" name="checkin" value={formData.checkin} onChange={handleChange} required />
-                <input type="checkout" className="form-control" placeholder="Check-out 00/00/0000 00:00" name="checkout" value={formData.checkout} onChange={handleChange} required />
-                <input type="checkout" className="form-control" placeholder="Valor" name="valor" value={formData.valor} onChange={handleChange} required />
+                <input type="text" className="form-control" placeholder=" Data Check-in 00/00/0000" name="datacheckin" value={formData.datacheckin} onChange={handleChange} required />
+                <input type="text" className="form-control" placeholder=" Data Check-out 00/00/0000" name="datacheckout" value={formData.datacheckout} onChange={handleChange} required />
+                <input type="text" className="form-control" placeholder=" Hora Check-in 00:00" name="horacheckin" value={formData.horacheckin} onChange={handleChange} required />
+                <input type="text" className="form-control" placeholder=" Hora Check-out 00:00" name="horacheckout" value={formData.horacheckout} onChange={handleChange} required />
+                <input type="text" className="form-control" placeholder="Valor" name="valor" value={formData.valor} onChange={handleChange} required />
                 <button type="submit" className="btn btn-primary btn-block">Salvar</button>
             </form>
         </div>
