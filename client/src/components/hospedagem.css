@@ -10,39 +10,28 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #301934;
 }
 
 .hospedagem-page .header {
-    background-color: rgba(48, 71, 94, 0.9);
+    /*background-color: rgba(48, 71, 94, 0.9);
     color: white;
     text-align: center;
     padding: 20px 0;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: bold;*/
+    background-color: transparent;
 }
 
-.hospedagem-page .background-image {
-    background-image: url('../images/image1.png');
-    /* Ajuste o caminho conforme necessário */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: fixed;
-    /* Mantém a imagem de fundo fixa e estendendo-se por toda a viewport */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-}
 
 .logo {
     display: block;
-    width: 40%;
+    width: 5%;
     /* Ajuste conforme a necessidade */
     margin: 0 auto;
-    /* Centraliza a imagem */
-    margin-bottom: 20px;
+    /* Centraliza a imagem 
+    margin-bottom: 20px;*/
+    margin-right: 5px;
 }
 
 .hospedagem-page .container {

@@ -1,18 +1,19 @@
 import React from 'react';
 import HospedagemForm from '../components/HospedagemForm';
 import '../components/hospedagem.css';
+import logo from '../images/logo.png';
 
-function HospedagemPage() { 
+function HospedagemPage() {
     return (
 
-        <div className="hospedagem-page"> 
-            <div className="background-image"></div>
+        <div className="hospedagem-page">
             <header className="header">
-                <h1>HOSPEDAGEM</h1>
+                <img src={logo} alt="Journey Mosaic" className="logo" />
             </header>
             <div className="container">
                 <HospedagemForm />
             </div>
+
         </div>
     );
 }

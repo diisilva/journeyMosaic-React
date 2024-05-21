@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './hospedagem.css';
-import logo from '../images/logo.png';
 import backgroundImage from '../images/image1.png';
 
 function HospedagemForm() {
