@@ -8,7 +8,7 @@ function CadastroPage() {
         <div className="cadastro-page">
             <div className="background-image"></div>
             <header className="header">
-                <h1>Sign up and plan the best trips of your life</h1>
+                <h1>Cadastre-se e planeje as melhores viagens da sua vida!</h1>
             </header>
             <div className="container">
                 <RegisterForm />

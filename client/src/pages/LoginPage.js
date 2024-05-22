@@ -31,9 +31,7 @@ function LoginPage() {
                 return response.json();
             })
             .then(data => {
-                console.log('Login successful:', data);
-                alert('Login successful! Welcome to Journey Mosaic.');
-                navigate('/dashboard');
+                navigate('/viagens');
             })
             .catch(error => {
                 console.error('Login failed:', error);
@@ -44,7 +42,7 @@ function LoginPage() {
     return (
         <div style={backgroundStyle} className="bg">
             <header className="header">
-                <h1 className="text-center text-light mb-4">Welcome to Journey Mosaic, your travel planner</h1>
+                <h1 className="text-center text-light mb-4">Bem vindo ao Journey Mosaic, seu planejador de viagens.</h1>
             </header>
             <div className="login-container">
                 <img src={logo} alt="Journey Mosaic" className="logo" />
@@ -68,11 +66,11 @@ function LoginPage() {
                             onChange={e => setPassword(e.target.value)}
                         />
                     </div>
-                    <button type="submit" className="btn btn-primary btn-block">Login</button>
+                    <button type="submit" className="btn btn-primary">Login</button>
                     <p className="text-center text-light">
                         <a href="#" className="text-light">Esqueci minha senha</a>
                     </p>
-                    <Link to="/cadastro" className="btn btn-secondary btn-block">Cadastre-se</Link>
+                    <Link to="/cadastro" className="btn btn-secondary">Cadastre-se</Link>
                 </form>
             </div>
         </div>

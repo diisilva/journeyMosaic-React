@@ -26,7 +26,7 @@ function ViagensPage() {
                 </div>
                 <div className="buttons-container">
                     <button className="btn btn-primary" onClick={handleViewTrips}>Minhas Viagens</button>
-                    <button className="btn btn-secondary" onClick={handleAddNewTrip}>Adicionar Nova Viagem</button>
+                    <button className="btn btn-secondary" onClick={handleAddNewTrip}>Nova Viagem</button>
                 </div>
             </div>
         </div>

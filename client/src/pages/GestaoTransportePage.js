@@ -7,7 +7,7 @@ function GestaoTransportePage() {
         <div className="gestao-transporte-page">
             <div className="background-image"></div>
             <header className="header">
-                <h1>Manage Your Transport Options</h1>
+                <h1>Gestão de Transporte</h1>
             </header>
             <div className="container">
                 <GestaoTransporteForm />

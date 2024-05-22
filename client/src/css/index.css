@@ -1,10 +1,11 @@
+/* index.css */
+
 body,
 html {
     margin: 0;
     height: 100%;
     font-family: Arial, sans-serif;
     background: none;
-
 }
 
 .header {
@@ -38,8 +39,8 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
-
 
 .logo {
     display: block;
@@ -50,19 +51,39 @@ html {
 
 .form-group {
     margin-bottom: 15px;
+    text-align: left;
 }
 
 .btn {
-    position: relative;
-    z-index: 3;
+    width: 100%;
     margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #6c63ff;
+}
+
+.btn-primary:hover {
+    background-color: #5753d1;
+}
+
+.btn-secondary {
+    background-color: #ff6b6b;
+}
+
+.btn-secondary:hover {
+    background-color: #d15353;
 }
 
 .homepage {
     background-color: #233861;
-    /* Esta linha pode ser removida se você preferir o fundo definido no body */
     position: relative;
     min-height: 100vh;
     color: #FFFFFF;
-    /* Para garantir que o texto fique legível no fundo escuro */
 }

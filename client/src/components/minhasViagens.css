@@ -8,7 +8,7 @@
 }
 
 .header {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(48, 71, 94, 0.9);
     color: white;
     text-align: center;
     padding: 20px;
@@ -81,8 +81,7 @@
     margin-top: 20px;
 }
 
-
-.btn {
+.viagens-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -97,30 +96,30 @@
     text-align: center;
 }
 
-.btn i {
+.viagens-btn i {
     margin-right: 10px;
 }
 
-.btn-primary {
+.viagens-btn-primary {
     background-color: #6c63ff;
 }
 
-.btn-primary:hover {
+.viagens-btn-primary:hover {
     background-color: #5753d1;
 }
 
-.btn-secondary {
+.viagens-btn-secondary {
     background-color: #ff6b6b;
 }
 
-.btn-secondary:hover {
+.viagens-btn-secondary:hover {
     background-color: #d15353;
 }
 
-.btn-tertiary {
+.viagens-btn-tertiary {
     background-color: #4caf50;
 }
 
-.btn-tertiary:hover {
+.viagens-btn-tertiary:hover {
     background-color: #45a049;
 }

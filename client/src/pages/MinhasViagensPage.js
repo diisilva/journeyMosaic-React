@@ -1,17 +1,21 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import '../components/minhasViagens.css';
 import logo from '../images/logo.png';
 
-
 function MinhasViagensPage() {
     const [date, setDate] = useState(new Date());
+    const navigate = useNavigate();
 
     const handleDateChange = (newDate) => {
         setDate(newDate);
-        // Adicione lógica para mostrar viagens ou atividades na data selecionada
         alert(`Visualizar viagens em: ${newDate}`);
+    };
+
+    const handleNavigate = (path) => {
+        navigate(path);
     };
 
     return (
@@ -32,13 +36,13 @@ function MinhasViagensPage() {
                     />
                 </div>
                 <div className="buttons-container">
-                    <button className="btn btn-primary">
+                    <button className="viagens-btn viagens-btn-primary" onClick={() => handleNavigate('/gestao-transporte')}>
                         <i className="fas fa-car"></i> Transporte
                     </button>
-                    <button className="btn btn-secondary">
+                    <button className="viagens-btn viagens-btn-secondary" onClick={() => handleNavigate('/hospedagem')}>
                         <i className="fas fa-bed"></i> Hospedagem
                     </button>
-                    <button className="btn btn-tertiary">
+                    <button className="viagens-btn viagens-btn-tertiary">
                         <i className="fas fa-calendar-check"></i> Atividades
                     </button>
                 </div>

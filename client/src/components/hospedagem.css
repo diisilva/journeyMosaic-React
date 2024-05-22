@@ -1,59 +1,45 @@
-.hospedagem-page body,
-.hospedagem-page html {
+/* hospedagem.css */
+
+body,
+html {
     margin: 0;
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
+    background: url('../images/image1.png') no-repeat center center fixed;
+    background-size: cover;
 }
 
 .hospedagem-page {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #233861;
 }
 
 .hospedagem-page .header {
-    /*background-color: rgba(48, 71, 94, 0.9);
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 24px;
-    font-weight: bold;*/
     background-color: transparent;
 }
-
 
 .logopequena {
     display: block;
     width: 5%;
-    /* Ajuste conforme a necessidade */
     margin: 0 auto;
-    /* Centraliza a imagem 
-    margin-bottom: 20px;*/
     margin-right: 5px;
 }
 
 .logo {
     display: block;
     width: 40%;
-    /* Ajuste conforme a necessidade */
     margin: 0 auto;
-    /*Centraliza a imagem */
     margin-bottom: 20px;
 }
 
 .hospedagem-page .container {
     width: 100%;
-    /* Ocupa a largura toda */
     max-width: 400px;
-    /* Define a largura máxima do container */
     margin: 0 auto;
-    /* Centraliza o container na página */
     padding-top: 60px;
-    /* Aumente este valor se o cabeçalho for maior */
     box-sizing: border-box;
-    /* Garante que o padding não adicione largura extra */
 }
 
 .hospedagem-page .login-container {
@@ -62,30 +48,23 @@
     padding: 40px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 2;
-    /* Garante que o container esteja sobre a imagem de fundo */
 }
 
 .hospedagem-page .form-group {
     width: 100%;
-    /* Define a largura para preencher o container */
     margin-bottom: 20px;
-    /* Adiciona espaço entre os campos do formulário */
 }
 
 .hospedagem-page .form-group input {
     width: 100%;
-    /* Preenche a largura do form-group */
     padding: 10px;
     margin-bottom: 10px;
-    /* Espaço entre os inputs */
     border-radius: 5px;
     border: 1px solid #ddd;
-    /* Adiciona uma borda sutil */
 }
 
 .hospedagem-page .form-group button {
     width: 100%;
-    /* Faz o botão preencher a largura do form-group */
     padding: 10px;
     border-radius: 5px;
     border: none;
@@ -99,7 +78,7 @@
     background-color: #301934;
 }
 
-.botao{
+.botao {
     width: 100px;
     padding: 10px;
     border-radius: 5px;

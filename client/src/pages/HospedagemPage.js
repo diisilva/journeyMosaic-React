@@ -80,7 +80,7 @@ function HospedagemPage() {
                 <img src={logo} alt="Journey Mosaic" className="logopequena" />
             </header>
             <div className="container">
-                <div className="hospedagem-list">
+                <div className="login-container">
                     {hospedagens.map(hospedagem => (
                         <div key={hospedagem.id_hospedagem} className="hospedagem-item">
                             <span>{hospedagem.nome}</span>
