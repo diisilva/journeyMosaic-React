@@ -1,17 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './hospedagem.css';
-import backgroundImage from '../images/image1.png';
 
-function HospedagemForm() {
+function HospedagemForm({ hospedagem, onFormSubmit, onCancel }) {
     const [formData, setFormData] = useState({
         nome: '', //nome
         endereco: '', // endereco
+        valor: '', //valor
         datacheckin: '', //checkin
         datacheckout: '', //checkout
         horacheckin: '', //checkin
-        horacheckout: '', //checkout
-        valor: '' //valor
+        horacheckout: '' //checkout
     });
+
+    useEffect(() => {
+        if (hospedagem) {
+            setFormData(hospedagem);
+        }
+    }, [hospedagem]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -21,12 +26,12 @@ function HospedagemForm() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (!formData.nome || !formData.endereco || !formData.datacheckin || !formData.datacheckout || !formData.horacheckin || !formData.horacheckout || !formData.valor) {
+        if (!formData.nome || !formData.endereco || !formData.valor || !formData.datacheckin || !formData.datacheckout || !formData.horacheckin || !formData.horacheckout) {
             alert("Por favor, preencha todos os campos.");
             return;
         }
 
-        const endpoint = "http://localhost:4000/register";
+        const endpoint = "http://localhost:4000/hospedagem";
 
         fetch(endpoint, {
             method: 'POST',
@@ -36,11 +41,11 @@ function HospedagemForm() {
             body: JSON.stringify({
                 nome: formData.nome,
                 endereco: formData.endereco,
+                valor: formData.valor,
                 datacheckin: formData.datacheckin,
                 datacheckout: formData.datacheckout,
                 horacheckin: formData.horacheckin,
-                horacheckout: formData.horacheckout,
-                valor: formData.valor
+                horacheckout: formData.horacheckout
             })
         })
             .then(response => {
@@ -55,17 +60,22 @@ function HospedagemForm() {
                 setFormData({
                     nome: '',
                     endereco: '',
+                    valor: '',
                     datacheckin: '',
                     datacheckout: '',
                     horacheckin: '',
-                    horacheckout: '',
-                    valor: ''
+                    horacheckout: ''
                 });
             })
             .catch((error) => {
                 console.error('Error:', error);
                 alert('Erro ao adicionar. Tente novamente.');
             });
+            onFormSubmit(formData);
+    };
+
+    const handleCancel = () => {
+        onCancel();
     };
 
     return (
@@ -77,12 +87,15 @@ function HospedagemForm() {
             <form onSubmit={handleSubmit} className="form-group">
                 <input type="text" className="form-control" placeholder="Nome" name="nome" value={formData.nome} onChange={handleChange} required />
                 <input type="text" className="form-control" placeholder="Endereço" name="endereco" value={formData.endereco} onChange={handleChange} required />
+                <input type="text" className="form-control" placeholder="Valor" name="valor" value={formData.valor} onChange={handleChange} required />
                 <input type="text" className="form-control" placeholder=" Data Check-in 00/00/0000" name="datacheckin" value={formData.datacheckin} onChange={handleChange} required />
                 <input type="text" className="form-control" placeholder=" Data Check-out 00/00/0000" name="datacheckout" value={formData.datacheckout} onChange={handleChange} required />
                 <input type="text" className="form-control" placeholder=" Hora Check-in 00:00" name="horacheckin" value={formData.horacheckin} onChange={handleChange} required />
                 <input type="text" className="form-control" placeholder=" Hora Check-out 00:00" name="horacheckout" value={formData.horacheckout} onChange={handleChange} required />
-                <input type="text" className="form-control" placeholder="Valor" name="valor" value={formData.valor} onChange={handleChange} required />
-                <button type="submit" className="btn btn-primary btn-block">Salvar</button>
+                <div className="form-actions">
+                    <button type="submit" className="btn btn-primary">Salvar</button>
+                    <button type="button" className="btn btn-secondary" onClick={handleCancel}>Cancelar</button>
+                </div>
             </form>
         </div>
     );

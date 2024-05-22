@@ -66,3 +66,74 @@ app.post('/login', async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
 });
+
+/////////////////HOSPEDAGEMM//////////////
+
+//adiciona hospedagem
+app.post('/hospedagem', async (req, res) => {
+    const { nome, endereco, valor, datacheckin, datacheckout, horacheckin, horacheckout} = req.body;
+
+    try {
+        const result = await pool.query(
+            'INSERT INTO hospedagem (nome, endereco, valor, datacheckin, datacheckout, horacheckin, horacheckout) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING id_hospedagem, nome, endereco, valor, datacheckin, datacheckout, horacheckin, horacheckout',
+            [nome, endereco, valor, datacheckin, datacheckout, horacheckin, horacheckout]
+        );
+
+        const hospedagem = result.rows[0];
+        res.status(201).json(hospedagem);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Erro ao adicionar a hospedagem.');
+    }
+});
+
+//listar hospedagens
+app.get('/hospedagem', async (req, res) => {
+    try {
+        const result = await pool.query('SELECT * FROM hospedagem');
+        res.status(200).json(result.rows);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Erro ao buscar hospedagens.');
+    }
+});
+
+//atualizar hospedagem
+app.put('/hospedagem/:id', async (req, res) => {
+    const { id } = req.params;
+    const { nome, endereco, valor, datacheckin, datacheckout, horacheckin, horacheckout } = req.body;
+
+    try {
+        const result = await pool.query(
+            'UPDATE hospedagem SET nome = $1, endereco = $2, valor = $3, datacheckin = $4, datacheckout = $5, horacheckin = $6, horacheckout = $7 WHERE id_hospedagem = $8 RETURNING *',
+            [nome, endereco, valor, datacheckin, datacheckout, horacheckin, horacheckout, id]
+        );
+
+        if (result.rowCount === 0) {
+            return res.status(404).send('Hospedagem não encontrada.');
+        }
+
+        res.status(200).json(result.rows[0]);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Erro ao atualizar a hospedagem.');
+    }
+});
+
+//excluir hospedagem
+app.delete('/hospedagem/:id', async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        const result = await pool.query('DELETE FROM hospedagem WHERE id_hospedagem = $1', [id]);
+
+        if (result.rowCount === 0) {
+            return res.status(404).send('Hospedagem não encontrada.');
+        }
+
+        res.status(204).send();
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Erro ao excluir a hospedagem.');
+    }
+});

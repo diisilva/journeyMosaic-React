@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #301934;
+    background-color: #233861;
 }
 
 .hospedagem-page .header {
@@ -24,7 +24,7 @@
 }
 
 
-.logo {
+.logopequena {
     display: block;
     width: 5%;
     /* Ajuste conforme a necessidade */
@@ -32,6 +32,15 @@
     /* Centraliza a imagem 
     margin-bottom: 20px;*/
     margin-right: 5px;
+}
+
+.logo {
+    display: block;
+    width: 40%;
+    /* Ajuste conforme a necessidade */
+    margin: 0 auto;
+    /*Centraliza a imagem */
+    margin-bottom: 20px;
 }
 
 .hospedagem-page .container {
@@ -87,6 +96,22 @@
 }
 
 .hospedagem-page .form-group button:hover {
+    background-color: #301934;
+}
+
+.botao{
+    width: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4B0082;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.botao:hover {
     background-color: #301934;
 }
 
