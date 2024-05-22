@@ -1,0 +1,69 @@
+/* viagens.css */
+
+.viagens-page {
+    position: relative;
+    min-height: 100vh;
+    background: url('../images/image1.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.header {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    color: white;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #6c63ff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #5753d1;
+}
+
+.btn-secondary {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #d15353;
+}

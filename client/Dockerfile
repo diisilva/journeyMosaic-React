@@ -6,10 +6,13 @@ WORKDIR /app
 
 # Copia os arquivos de dependências e instala as dependências
 COPY package*.json ./
-RUN npm install --save-dev @babel/plugin-proposal-private-property-in-object
+RUN npm install
 
 # Copia o restante dos arquivos do projeto
 COPY . .
+
+# Instala as dependências de produção
+RUN npm install react-calendar
 
 # Expõe a porta que o React roda por padrão
 EXPOSE 3000
