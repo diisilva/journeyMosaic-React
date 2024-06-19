@@ -9,7 +9,8 @@ import LoginPage from './pages/LoginPage';
 import GestaoTransportePage from './pages/GestaoTransportePage'; // Importe o GestaoTransportePage
 import ViagensPage from './pages/ViagensPage'; // Importe o ViagensPage
 import MinhasViagensPage from './pages/MinhasViagensPage'; // Importe o MinhasViagensPage
-import HospedagemPage from './pages/HospedagemPage';
+import HospedagemPage from './pages/HospedagemPage'; // Importe o HospedagemPage
+import AtividadesPage from './pages/AtividadesPage'; // Importe o AtividadesPage
 
 function App() {
     return (
@@ -21,7 +22,8 @@ function App() {
                 <Route path="/gestao-transporte" element={<GestaoTransportePage />} /> {/* Nova rota */}
                 <Route path="/viagens" element={<ViagensPage />} /> {/* Nova rota para viagens */}
                 <Route path="/minhas-viagens" element={<MinhasViagensPage />} /> {/* Nova rota para minhas viagens */}
-                <Route path="/hospedagem" element={<HospedagemPage />} /> {/*npva hospedagem */}
+                <Route path="/hospedagem" element={<HospedagemPage />} /> {/* Nova rota para hospedagem */}
+                <Route path="/atividades" element={<AtividadesPage />} /> {/* Nova rota para atividades */}
             </Routes>
         </Router>
     );

@@ -137,3 +137,74 @@ app.delete('/hospedagem/:id', async (req, res) => {
         res.status(500).send('Erro ao excluir a hospedagem.');
     }
 });
+
+/////////////////ATIVIDADES//////////////
+
+//adiciona atividade
+app.post('/atividades', async (req, res) => {
+    const { nome, data, descricao, endereco, valor } = req.body;
+
+    try {
+        const result = await pool.query(
+            'INSERT INTO atividades (nome, data, descricao, endereco, valor) VALUES ($1, $2, $3, $4, $5) RETURNING id_atividade, nome, data, descricao, endereco, valor',
+            [nome, data, descricao, endereco, valor]
+        );
+
+        const atividade = result.rows[0];
+        res.status(201).json(atividade);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Erro ao adicionar a atividade.');
+    }
+});
+
+//listar atividades
+app.get('/atividades', async (req, res) => {
+    try {
+        const result = await pool.query('SELECT * FROM atividades');
+        res.status(200).json(result.rows);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Erro ao buscar atividades.');
+    }
+});
+
+//atualizar atividade
+app.put('/atividades/:id', async (req, res) => {
+    const { id } = req.params;
+    const { nome, data, descricao, endereco, valor } = req.body;
+
+    try {
+        const result = await pool.query(
+            'UPDATE atividades SET nome = $1, data = $2, descricao = $3, endereco = $4, valor = $5 WHERE id_atividade = $6 RETURNING *',
+            [nome, data, descricao, endereco, valor, id]
+        );
+
+        if (result.rowCount === 0) {
+            return res.status(404).send('Atividade não encontrada.');
+        }
+
+        res.status(200).json(result.rows[0]);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Erro ao atualizar a atividade.');
+    }
+});
+
+//excluir atividade
+app.delete('/atividades/:id', async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        const result = await pool.query('DELETE FROM atividades WHERE id_atividade = $1', [id]);
+
+        if (result.rowCount === 0) {
+            return res.status(404).send('Atividade não encontrada.');
+        }
+
+        res.status(204).send();
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Erro ao excluir a atividade.');
+    }
+});

@@ -1,174 +1,171 @@
 .homepage {
     background-color: transparent;
-    /* Ou remova esta linha */
     position: relative;
     min-height: 100vh;
     color: #FFFFFF;
-    /* Para garantir que o texto fique legível no fundo escuro */
 }
-
 
 .subtract {
     position: absolute;
-    width: 1537px;
-    height: 1114px;
-    left: -68px;
-    top: -1px;
+    width: 100vw;
+    height: auto;
+    left: 0;
+    top: 0;
     background-size: cover;
     z-index: 1;
 }
 
 .rectangle-44 {
     position: absolute;
-    width: 1440px;
-    height: 1424px;
-    left: 0px;
-    top: 1022px;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 80vh;
     background: #233861;
     z-index: 1;
 }
 
 .rectangle-39 {
     position: absolute;
-    width: 720px;
-    height: 512px;
-    left: 0px;
-    top: 0px;
+    width: 50%;
+    height: auto;
+    left: 0;
+    top: 0;
     background: #233861;
     z-index: 1;
 }
 
 .journey-logo {
     position: absolute;
-    width: 324px;
-    height: 324px;
-    left: 77px;
-    top: 51px;
+    width: 20vw;
+    height: auto;
+    left: 5vw;
+    top: 5vh;
     background-size: cover;
     z-index: 2;
 }
 
 .rectangle-40 {
     position: absolute;
-    width: 514px;
-    height: 512px;
-    left: 0px;
-    top: 512px;
+    width: 35%;
+    height: auto;
+    left: 0;
+    top: 50vh;
     background: #233861;
     z-index: 1;
 }
 
 .rectangle-43 {
     position: absolute;
-    width: 300px;
-    height: 60px;
-    left: 594px;
-    top: 738px;
+    width: 20%;
+    height: 8vh;
+    left: 50%;
+    top: 60vh;
     background: #1C1945;
     border-radius: 20px;
+    transform: translateX(-50%);
     z-index: 3;
 }
 
 .clique-aqui {
     position: absolute;
-    width: 150px;
-    height: 32px;
-    left: 661px;
-    top: 751px;
+    width: 10%;
+    height: auto;
+    left: 50%;
+    top: 62vh;
     font-family: 'JejuMyeongjo';
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
-    line-height: 32px;
+    font-size: 2vw;
+    line-height: 1.5em;
     color: #FFFFFF;
+    transform: translateX(-50%);
     z-index: 4;
     cursor: pointer;
 }
 
 .subtract-1 {
     position: absolute;
-    width: 231px;
-    height: 512px;
-    left: 489px;
-    top: 512px;
+    width: 15%;
+    height: auto;
+    left: 30%;
+    top: 50vh;
     background: #233861;
     z-index: 2;
 }
 
 .ellipse-2 {
     position: absolute;
-    width: 393px;
-    height: 512px;
-    left: 514px;
-    top: 0px;
+    width: 25%;
+    height: auto;
+    left: 25%;
+    top: 0;
     background-size: cover;
     z-index: 3;
-    /* Coloca na frente de outros elementos */
 }
 
 .ellipse-3 {
     position: absolute;
-    width: 421.01px;
-    height: 510.68px;
-    left: 940.85px;
-    top: 1020.65px;
+    width: 30%;
+    height: auto;
+    left: 65%;
+    top: 70vh;
     background-size: cover;
     transform: rotate(179.34deg);
     z-index: 3;
-    /* Coloca na frente de outros elementos */
 }
 
 .journey-title {
     position: absolute;
-    width: 397px;
-    height: 131px;
-    left: 589px;
-    top: 125px;
+    width: 30%;
+    height: auto;
+    left: 50%;
+    top: 15vh;
     font-family: 'JejuMyeongjo';
     font-style: normal;
     font-weight: 400;
-    font-size: 48px;
-    line-height: 48px;
+    font-size: 3vw;
+    line-height: 1.5em;
     color: #FFFFFF;
+    transform: translateX(-50%);
     z-index: 5;
-    /* Coloca na frente das elipses ok*/
 }
 
 .rectangle-4 {
     position: absolute;
-    width: 300px;
-    height: 60px;
-    left: 595px;
-    top: 375px;
+    width: 20%;
+    height: 8vh;
+    left: 50%;
+    top: 40vh;
     background: #1C1945;
     border-radius: 20px;
+    transform: translateX(-50%);
     z-index: 4;
-    /* Coloca acima da ellipse-2 */
 }
 
 .comece-agora {
     position: absolute;
-    width: 224px;
-    height: 32px;
-    left: 633px;
-    top: 389px;
+    width: 15%;
+    height: auto;
+    left: 50%;
+    top: 42vh;
     font-family: 'JejuMyeongjo';
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
-    line-height: 32px;
+    font-size: 2vw;
+    line-height: 1.5em;
     color: #FFFFFF;
+    transform: translateX(-50%);
     z-index: 5;
-    /* Coloca na frente das elipses */
     cursor: pointer;
 }
 
 .rectangle-42 {
     position: absolute;
-    width: 1156px;
-    height: 355px;
-    left: 149px;
-    top: 1177px;
+    width: 80%;
+    height: auto;
+    left: 10%;
+    top: 90vh;
     background: #7389B6;
     border-radius: 10px;
     z-index: 1;
@@ -176,10 +173,10 @@
 
 .rectangle-45 {
     position: absolute;
-    width: 535px;
-    height: 355px;
-    left: 770px;
-    top: 1670px;
+    width: 50%;
+    height: auto;
+    left: 40%;
+    top: 120vh;
     background: #7389B6;
     border-radius: 10px;
     z-index: 1;
@@ -187,81 +184,171 @@
 
 .description {
     position: absolute;
-    width: 480px;
-    height: 304px;
-    left: 804px;
-    top: 1697px;
+    width: 45%;
+    height: auto;
+    left: 55%;
+    top: 120vh;
     font-family: 'JejuMyeongjo';
     font-style: normal;
     font-weight: 400;
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 2.5vw;
+    line-height: 1.5em;
     color: #000000;
     z-index: 2;
 }
 
 .main-image {
     position: absolute;
-    width: 583px;
-    height: 412px;
-    left: 78px;
-    top: 1670px;
+    width: 35%;
+    height: auto;
+    left: 10%;
+    top: 120vh;
     background-size: cover;
     z-index: 2;
 }
 
 .slogan {
     position: absolute;
-    width: 838px;
-    height: 336px;
-    left: 351px;
-    top: 1243px;
+    width: 60%;
+    height: auto;
+    left: 20%;
+    top: 100vh;
     font-family: 'JejuMyeongjo';
     font-style: normal;
     font-weight: 400;
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 2.5vw;
+    line-height: 1.5em;
     color: #FFFFFF;
     z-index: 2;
 }
 
 .login-link {
     position: absolute;
-    width: 316px;
-    height: 40px;
-    left: 595px;
-    top: 698px;
+    width: 25%;
+    height: auto;
+    left: 50%;
+    top: 55vh;
     font-family: 'JejuMyeongjo';
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
-    line-height: 32px;
+    font-size: 2vw;
+    line-height: 1.5em;
     color: #FFFFFF;
+    transform: translateX(-50%);
     z-index: 2;
 }
 
 .remove-bg {
     position: absolute;
-    width: 413px;
-    height: 400px;
-    left: 66px;
-    top: 499px;
+    width: 25%;
+    height: auto;
+    left: 5%;
+    top: 50vh;
     background-size: cover;
     z-index: 2;
 }
 
 .next-trip {
     position: absolute;
-    width: 228px;
-    height: 167px;
-    left: 147px;
-    top: 642.95px;
+    width: 20%;
+    height: auto;
+    left: 10%;
+    top: 55vh;
     font-family: 'Just Me Again Down Here';
     font-style: normal;
     font-weight: 400;
-    font-size: 40px;
-    line-height: 60px;
+    font-size: 2.5vw;
+    line-height: 1.5em;
     color: #000000;
     transform: rotate(-8.82deg);
     z-index: 2;
+}
+
+/* Media Queries para ajustes em diferentes tamanhos de tela */
+@media (max-width: 1200px) {
+    .rectangle-44,
+    .rectangle-39,
+    .rectangle-40,
+    .rectangle-43,
+    .rectangle-42,
+    .rectangle-45,
+    .rectangle-4 {
+        width: 90%;
+    }
+
+    .journey-logo,
+    .ellipse-2,
+    .ellipse-3,
+    .main-image,
+    .remove-bg {
+        width: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    .journey-title,
+    .clique-aqui,
+    .comece-agora,
+    .slogan,
+    .description,
+    .next-trip,
+    .login-link {
+        font-size: 4vw;
+    }
+
+    .rectangle-43,
+    .rectangle-4 {
+        width: 70%;
+        left: 15%;
+    }
+
+    .rectangle-42,
+    .rectangle-45 {
+        width: 90%;
+        left: 5%;
+    }
+
+    .main-image,
+    .remove-bg {
+        width: 60%;
+    }
+
+    .ellipse-2,
+    .ellipse-3 {
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .journey-title,
+    .clique-aqui,
+    .comece-agora,
+    .slogan,
+    .description,
+    .next-trip,
+    .login-link {
+        font-size: 5vw;
+    }
+
+    .rectangle-43,
+    .rectangle-4 {
+        width: 80%;
+        left: 10%;
+    }
+
+    .rectangle-42,
+    .rectangle-45 {
+        width: 95%;
+        left: 2.5%;
+    }
+
+    .main-image,
+    .remove-bg {
+        width: 80%;
+    }
+
+    .ellipse-2,
+    .ellipse-3 {
+        width: 60%;
+    }
 }
