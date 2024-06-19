@@ -1,1 +1,16 @@
-.history/
+# Ignorar diretório node_modules
+node_modules/
+
+# Ignorar logs
+*.log
+
+# Ignorar arquivos de ambiente
+.env
+
+# Ignorar arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ignorar dependências de pacotes
+package-lock.json
+yarn.lock
