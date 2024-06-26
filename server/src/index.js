@@ -98,7 +98,7 @@ app.get('/hospedagem', async (req, res) => {
     }
 });
 
-//atualizar hospedagem
+//atualizar hospedagem a
 app.put('/hospedagem/:id', async (req, res) => {
     const { id } = req.params;
     const { nome, endereco, valor, datacheckin, datacheckout, horacheckin, horacheckout } = req.body;

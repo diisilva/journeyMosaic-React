@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import AtividadesForm from '../components/AtividadesForm';
 import '../components/atividades.css';
 import logo from '../images/logo.png';
-
+// a
 function AtividadesPage() {
     const [atividades, setAtividades] = useState([]);
     const [editingAtividade, setEditingAtividade] = useState(null);
