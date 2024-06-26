@@ -10,7 +10,7 @@ import CadastroViagemPage from './pages/CadastroViagemPage';
 import MinhasViagensPage from './pages/MinhasViagensPage';
 import HospedagemPage from './pages/HospedagemPage';
 import EdicaoTransportePage from './pages/EdicaoTransportePage'; // Import the new page
-
+import AtividadesPage from './pages/AtividadesPage';
 
 function App() {
     return (
@@ -25,6 +25,7 @@ function App() {
                 <Route path="/minhas-viagens" element={<MinhasViagensPage />} />
                 <Route path="/hospedagem" element={<HospedagemPage />} />
                 <Route path="/editar/:id/:tipo" element={<EdicaoTransportePage />} /> {/* Add the new route */}
+                <Route path="/atividades" element={<AtividadesPage />} />
             </Routes>
         </Router>
     );
