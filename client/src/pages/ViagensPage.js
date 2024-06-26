@@ -7,7 +7,7 @@ function ViagensPage() {
     const navigate = useNavigate();
 
     const handleAddNewTrip = () => {
-        navigate('/gestao-transporte');
+        navigate('/cadastro-viagem');
     };
 
     const handleViewTrips = () => {
