@@ -1,4 +1,4 @@
-/* hospedagem.css */
+/* hospedagemPage.css */
 
 body,
 html {
@@ -17,31 +17,24 @@ html {
 }
 
 .hospedagem-header {
-    background-color: rgba(48, 71, 94, 0.9); /* Fundo azul para o cabeçalho */
-    padding: 10px 20px; /* Reduzir a altura do cabeçalho */
+    background-color: rgba(48, 71, 94, 0.9);
+    padding: 10px 20px;
     text-align: center;
     color: white;
 }
 
-.logopequena {
-    display: block;
-    width: 5%;
-    margin: 0 auto;
-    margin-right: 5px;
-}
-
 .hospedagem-logo {
     display: block;
-    width: 40%;
+    width: 10%;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 .hospedagem-container {
     width: 100%;
-    max-width: 900px; /* Ajustando a largura máxima */
+    max-width: 900px;
     margin: 0 auto;
-    padding-top: 40px; /* Ajustar a altura */
+    padding-top: 40px;
     box-sizing: border-box;
 }
 
@@ -54,67 +47,15 @@ html {
     width: 100%;
 }
 
-.hospedagem-form-group {
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.hospedagem-form-group input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
-
-.hospedagem-form-group button {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    background-color: #4B0082;
+.hospedagem-text-center {
     color: white;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.hospedagem-form-group button:hover {
-    background-color: #301934;
-}
-
-.hospedagem-botao {
-    width: 100px;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    background-color: #4B0082;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
     text-align: center;
-}
-
-.hospedagem-botao:hover {
-    background-color: #301934;
-}
-
-.hospedagem-text-light {
-    color: #f8f9fa;
-}
-
-.hospedagem-gestao-container {
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 900px; /* Ajustando a largura do container */
-    margin: 0 auto; /* Centralizando o container */
 }
 
 .hospedagem-table {
     width: 100%;
     border-collapse: collapse;
+    color: white;
 }
 
 .hospedagem-table th,
@@ -124,7 +65,8 @@ html {
 }
 
 .hospedagem-table th {
-    background-color: #f2f2f2;
+    background-color: #4B0082;
+    color: white;
 }
 
 .hospedagem-actions button {

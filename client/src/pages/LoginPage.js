@@ -31,6 +31,7 @@ function LoginPage() {
                 return response.json();
             })
             .then(data => {
+                localStorage.setItem('id_usuario', data.user.id_usuario); // Salvando o ID do usuário no localStorage
                 navigate('/viagens');
             })
             .catch(error => {

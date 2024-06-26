@@ -1,25 +1,48 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './gestaoTransporte.css';
-import logo from '../images/logo.png';
 
-function GestaoTransporte() {
-    const [tipoTransporte, setTipoTransporte] = useState('');
+function GestaoTransporteForm({ onSave, initialData = {}, isEditing = false, idUsuario, idViagem }) {
+    const [tipoTransporte, setTipoTransporte] = useState(initialData.tipoTransporte || '');
     const [formData, setFormData] = useState({
-        numeroVoo: '',
-        portaEmbarque: '',
-        bagagem: '',
-        empresa: '',
-        hora: '',
-        data: '',
-        numeroLinha: '',
-        plataformaEmbarque: '',
-        restricoes: '',
-        assento: '',
-        numeroTrem: '',
-        vagao: '',
-        estacaoPartida: '',
-        numeroAssento: ''
+        numeroVoo: initialData.numeroVoo || '',
+        portaEmbarque: initialData.portaEmbarque || '',
+        bagagem: initialData.bagagem || '',
+        empresa: initialData.empresa || '',
+        hora: initialData.hora || '',
+        data: initialData.data || '',
+        numeroLinha: initialData.numeroLinha || '',
+        plataformaEmbarque: initialData.plataformaEmbarque || '',
+        restricoes: initialData.restricoes || '',
+        assento: initialData.assento || '',
+        numeroTrem: initialData.numeroTrem || '',
+        vagao: initialData.vagao || '',
+        estacaoPartida: initialData.estacaoPartida || '',
+        numeroAssento: initialData.numeroAssento || ''
     });
+
+    useEffect(() => {
+        if (isEditing && initialData) {
+            setTipoTransporte(initialData.tipoTransporte);
+            setFormData({
+                numeroVoo: initialData.numeroVoo || '',
+                portaEmbarque: initialData.portaEmbarque || '',
+                bagagem: initialData.bagagem || '',
+                empresa: initialData.empresa || '',
+                hora: initialData.hora || '',
+                data: initialData.data || '',
+                numeroLinha: initialData.numeroLinha || '',
+                plataformaEmbarque: initialData.plataformaEmbarque || '',
+                restricoes: initialData.restricoes || '',
+                assento: initialData.assento || '',
+                numeroTrem: initialData.numeroTrem || '',
+                vagao: initialData.vagao || '',
+                estacaoPartida: initialData.estacaoPartida || '',
+                numeroAssento: initialData.numeroAssento || ''
+            });
+        }
+        console.log('ID do usuário:', idUsuario);
+        console.log('ID da viagem:', idViagem);
+    }, [isEditing, initialData, idUsuario, idViagem]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -48,50 +71,13 @@ function GestaoTransporte() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        const endpoint = "http://localhost:4000/transporte";
-
-        fetch(endpoint, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                tipoTransporte,
-                ...formData
-            })
-        })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Falha ao registrar transporte');
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log('Success:', data);
-                alert('Cadastro de transporte realizado com sucesso!');
-                setTipoTransporte('');
-                setFormData({
-                    numeroVoo: '',
-                    portaEmbarque: '',
-                    bagagem: '',
-                    empresa: '',
-                    hora: '',
-                    data: '',
-                    numeroLinha: '',
-                    plataformaEmbarque: '',
-                    restricoes: '',
-                    assento: '',
-                    numeroTrem: '',
-                    vagao: '',
-                    estacaoPartida: '',
-                    numeroAssento: ''
-                });
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-                alert('Erro ao cadastrar transporte. Tente novamente.');
-            });
+        onSave({
+            id: initialData.id_transporte,
+            id_usuario: idUsuario,
+            id_viagem: idViagem,
+            tipoTransporte,
+            ...formData
+        });
     };
 
     const renderFormFields = () => {
@@ -129,23 +115,26 @@ function GestaoTransporte() {
 
     return (
         <div className="gestao-container">
-            <img src={logo} alt="Logo" className="logo" />
-            <h2 className="text-center">Gestão de Transporte</h2>
+            <h2 className="text-center">{isEditing ? 'Editar Transporte' : 'Cadastrar Transporte'}</h2>
             <form onSubmit={handleSubmit} className="form-group">
-                <select className="form-control" value={tipoTransporte} onChange={handleTipoChange} required>
+                <select className="form-control" value={tipoTransporte} onChange={handleTipoChange} required disabled={isEditing}>
                     <option value="">Selecione o Tipo de Transporte</option>
                     <option value="aviao">Avião</option>
                     <option value="onibus">Ônibus</option>
                     <option value="trem">Trem</option>
                 </select>
-                {renderFormFields()}
-                <input type="text" className="form-control" placeholder="Empresa" name="empresa" value={formData.empresa} onChange={handleChange} required />
-                <input type="time" className="form-control" placeholder="Hora" name="hora" value={formData.hora} onChange={handleChange} required />
-                <input type="date" className="form-control" placeholder="Data" name="data" value={formData.data} onChange={handleChange} required />
-                <button type="submit" className="btn btn-primary btn-block">Cadastrar Transporte</button>
+                {tipoTransporte && renderFormFields()}
+                {tipoTransporte && (
+                    <>
+                        <input type="text" className="form-control" placeholder="Empresa" name="empresa" value={formData.empresa} onChange={handleChange} required />
+                        <input type="time" className="form-control" placeholder="Hora" name="hora" value={formData.hora} onChange={handleChange} required />
+                        <input type="date" className="form-control" placeholder="Data" name="data" value={formData.data} onChange={handleChange} required />
+                    </>
+                )}
+                <button type="submit" className="btn btn-primary btn-block">{isEditing ? 'Atualizar Transporte' : 'Cadastrar Transporte'}</button>
             </form>
         </div>
     );
 }
 
-export default GestaoTransporte;
+export default GestaoTransporteForm;

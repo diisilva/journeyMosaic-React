@@ -1,29 +1,30 @@
 // src/App.js
-// teste miruna
-// teste 2
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from './pages/HomePage'; // Importe o HomePage
+import HomePage from './pages/HomePage';
 import CadastroPage from './pages/CadastroPage';
 import LoginPage from './pages/LoginPage';
-import GestaoTransportePage from './pages/GestaoTransportePage'; // Importe o GestaoTransportePage
-import ViagensPage from './pages/ViagensPage'; // Importe o ViagensPage
-import MinhasViagensPage from './pages/MinhasViagensPage'; // Importe o MinhasViagensPage
-import HospedagemPage from './pages/HospedagemPage'; // Importe o HospedagemPage
-import AtividadesPage from './pages/AtividadesPage'; // Importe o AtividadesPage
+import GestaoTransportePage from './pages/GestaoTransportePage';
+import ViagensPage from './pages/ViagensPage';
+import CadastroViagemPage from './pages/CadastroViagemPage';
+import MinhasViagensPage from './pages/MinhasViagensPage';
+import HospedagemPage from './pages/HospedagemPage';
+import EdicaoTransportePage from './pages/EdicaoTransportePage'; // Import the new page
+
 
 function App() {
     return (
         <Router>
             <Routes>
-                <Route exact path="/" element={<HomePage />} /> {/* Altere a rota inicial para HomePage */}
+                <Route exact path="/" element={<HomePage />} />
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/cadastro" element={<CadastroPage />} />
-                <Route path="/gestao-transporte" element={<GestaoTransportePage />} /> {/* Nova rota */}
-                <Route path="/viagens" element={<ViagensPage />} /> {/* Nova rota para viagens */}
-                <Route path="/minhas-viagens" element={<MinhasViagensPage />} /> {/* Nova rota para minhas viagens */}
-                <Route path="/hospedagem" element={<HospedagemPage />} /> {/* Nova rota para hospedagem */}
-                <Route path="/atividades" element={<AtividadesPage />} /> {/* Nova rota para atividades */}
+                <Route path="/gestao-transporte" element={<GestaoTransportePage />} />
+                <Route path="/viagens" element={<ViagensPage />} />
+                <Route path="/cadastro-viagem" element={<CadastroViagemPage />} />
+                <Route path="/minhas-viagens" element={<MinhasViagensPage />} />
+                <Route path="/hospedagem" element={<HospedagemPage />} />
+                <Route path="/editar/:id/:tipo" element={<EdicaoTransportePage />} /> {/* Add the new route */}
             </Routes>
         </Router>
     );
